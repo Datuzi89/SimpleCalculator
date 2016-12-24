@@ -5,11 +5,10 @@
 //  Created by Xuezhu on 12/23/16.
 //  Copyright © 2016 Xuezhu. All rights reserved.
 //
-
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet private weak var display: UILabel!
     
     private var userIsInTheMiddleOfTyping = false
@@ -32,7 +31,7 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
     private var displayValue: Double {
         get {
             return Double(display.text!)!
@@ -42,12 +41,23 @@ class ViewController: UIViewController {
         }
     }
     
+    var savedProgram: Model.PropertyList?
+    @IBAction func save() {
+        savedProgram = model.program
+    }
+    
+    @IBAction func ans() {
+        if savedProgram != nil {
+            model.program = savedProgram!
+            displayValue = model.result
+        }
+    }
+    
     private var model = Model()
     
     @IBAction private func performOperation(_ sender: UIButton) {
         if userIsInTheMiddleOfTyping {
             model.setOperand(operand: displayValue)
-            print(model.result)
             userIsInTheMiddleOfTyping = false
         }
         if let mathematicalSymbol = sender.currentTitle {

@@ -14,6 +14,7 @@
 		FAF400DA1E0DC8140005C06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF400D81E0DC8140005C06E /* LaunchScreen.storyboard */; };
 		FAF400E51E0DC8140005C06E /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF400E41E0DC8140005C06E /* CalculatorTests.swift */; };
 		FAF400F01E0DC8140005C06E /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF400EF1E0DC8140005C06E /* CalculatorUITests.swift */; };
+		FAF400FF1E0E18ED0005C06E /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF400FE1E0E18ED0005C06E /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		FAF400EB1E0DC8140005C06E /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF400EF1E0DC8140005C06E /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		FAF400F11E0DC8140005C06E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF400FE1E0E18ED0005C06E /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,10 @@
 		FAF400CE1E0DC8140005C06E /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				FAF400CF1E0DC8140005C06E /* AppDelegate.swift */,
+				FAF400FE1E0E18ED0005C06E /* Model.swift */,
+				FAF400FD1E0DC84C0005C06E /* Supporting Files */,
 				FAF400D11E0DC8140005C06E /* ViewController.swift */,
 				FAF400D31E0DC8140005C06E /* Main.storyboard */,
-				FAF400D61E0DC8140005C06E /* Assets.xcassets */,
-				FAF400D81E0DC8140005C06E /* LaunchScreen.storyboard */,
-				FAF400DB1E0DC8140005C06E /* Info.plist */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -123,6 +123,17 @@
 				FAF400F11E0DC8140005C06E /* Info.plist */,
 			);
 			path = CalculatorUITests;
+			sourceTree = "<group>";
+		};
+		FAF400FD1E0DC84C0005C06E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAF400CF1E0DC8140005C06E /* AppDelegate.swift */,
+				FAF400D61E0DC8140005C06E /* Assets.xcassets */,
+				FAF400D81E0DC8140005C06E /* LaunchScreen.storyboard */,
+				FAF400DB1E0DC8140005C06E /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF400FF1E0E18ED0005C06E /* Model.swift in Sources */,
 				FAF400D21E0DC8140005C06E /* ViewController.swift in Sources */,
 				FAF400D01E0DC8140005C06E /* AppDelegate.swift in Sources */,
 			);
