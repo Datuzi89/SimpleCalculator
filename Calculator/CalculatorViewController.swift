@@ -7,38 +7,35 @@
 //
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
     
     @IBOutlet private weak var display: UILabel!
     
     private var userIsInTheMiddleOfTyping = false
+    private var isFloatingPoint = false
     
     @IBAction private func touchDigit(_ sender: UIButton) {
         let digit = sender.currentTitle!
         if userIsInTheMiddleOfTyping {
-            let textCurrentlyInDisplay = display.text!
-            display.text = textCurrentlyInDisplay + digit
-        } else {
-            if digit != "0" {
-                userIsInTheMiddleOfTyping = true
+            if digit != "." || !isFloatingPoint {
+                let textCurrentlyInDisplay = display.text!
+                display.text = textCurrentlyInDisplay + digit
+                if digit == "." { isFloatingPoint = true}
             }
+        } else {
+            if digit != "0" { userIsInTheMiddleOfTyping = true }
             if digit == "." {
                 display.text = "0" + digit
+                isFloatingPoint = true
             }
-            else {
-                display.text = digit
-            }
+            else { display.text = digit }
         }
         
     }
     
     private var displayValue: Double {
-        get {
-            return Double(display.text!)!
-        }
-        set {
-            display.text = String(format:"%g", newValue)
-        }
+        get { return Double(display.text!)! }
+        set { display.text = String(format:"%g", newValue) }
     }
     
     var savedProgram: Model.PropertyList?
@@ -59,6 +56,7 @@ class ViewController: UIViewController {
         if userIsInTheMiddleOfTyping {
             model.setOperand(operand: displayValue)
             userIsInTheMiddleOfTyping = false
+            isFloatingPoint = false
         }
         if let mathematicalSymbol = sender.currentTitle {
             model.performOperation(symbol: mathematicalSymbol)

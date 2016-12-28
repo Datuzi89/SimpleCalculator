@@ -51,16 +51,17 @@ class Model {
             case .UnaryOperation(let function):
                 accumulator = function(accumulator)
             case .BinaryOperation(let function):
+                executePendingBinaryOperation()
                 pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator)
             case .Clear:
-                accumulator = 0
+                clear()
             case .Equals:
-                exexecutePendingBinaryOperation()
+                executePendingBinaryOperation()
             }
         }
     }
     
-    private func exexecutePendingBinaryOperation(){
+    private func executePendingBinaryOperation(){
         if pending != nil {
             accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
             pending = nil
@@ -100,8 +101,6 @@ class Model {
     }
     
     var result: Double {
-        get {
-            return accumulator
-        }
+        return accumulator
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAF400D01E0DC8140005C06E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF400CF1E0DC8140005C06E /* AppDelegate.swift */; };
-		FAF400D21E0DC8140005C06E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF400D11E0DC8140005C06E /* ViewController.swift */; };
+		FAF400D21E0DC8140005C06E /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF400D11E0DC8140005C06E /* CalculatorViewController.swift */; };
 		FAF400D51E0DC8140005C06E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF400D31E0DC8140005C06E /* Main.storyboard */; };
 		FAF400D71E0DC8140005C06E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF400D61E0DC8140005C06E /* Assets.xcassets */; };
 		FAF400DA1E0DC8140005C06E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF400D81E0DC8140005C06E /* LaunchScreen.storyboard */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		FAF400CC1E0DC8140005C06E /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF400CF1E0DC8140005C06E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FAF400D11E0DC8140005C06E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAF400D11E0DC8140005C06E /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		FAF400D41E0DC8140005C06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAF400D61E0DC8140005C06E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF400D91E0DC8140005C06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,9 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				FAF400FE1E0E18ED0005C06E /* Model.swift */,
-				FAF400FD1E0DC84C0005C06E /* Supporting Files */,
-				FAF400D11E0DC8140005C06E /* ViewController.swift */,
+				FAF400D11E0DC8140005C06E /* CalculatorViewController.swift */,
 				FAF400D31E0DC8140005C06E /* Main.storyboard */,
+				FAF400FD1E0DC84C0005C06E /* Supporting Files */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF400FF1E0E18ED0005C06E /* Model.swift in Sources */,
-				FAF400D21E0DC8140005C06E /* ViewController.swift in Sources */,
+				FAF400D21E0DC8140005C06E /* CalculatorViewController.swift in Sources */,
 				FAF400D01E0DC8140005C06E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +517,7 @@
 				FAF400F61E0DC8140005C06E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAF400F71E0DC8140005C06E /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +526,7 @@
 				FAF400F91E0DC8140005C06E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAF400FA1E0DC8140005C06E /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +535,7 @@
 				FAF400FC1E0DC8140005C06E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
